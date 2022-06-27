@@ -16,7 +16,6 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        // $departments = Department::all();
         $departments = Department::paginate(10);
 
         return view('departments.allDepartments', compact('departments'));
@@ -106,9 +105,8 @@ class DepartmentController extends Controller
         ]);
 
 
-        $department = Department::find($request->doctorSpecialty_id);
+        $department = Department::find($request->dept_id);
 
-        $department = new  Department;
         $department->name = $request->name;
         $department->description = $request->description;
         $department->save();

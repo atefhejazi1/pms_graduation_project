@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\OfferController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +38,24 @@ Route::prefix('department')->controller(DepartmentController::class)->middleware
 });
 
 Route::prefix('blog')->controller(BlogController::class)->middleware(['auth'])->group(function () {
+    Route::get('/all', 'index');
+    Route::get('/add', 'create');
+    Route::post('/store', 'store');
+    Route::get('/edit/{id}', 'edit');
+    Route::post('/update', 'update');
+    Route::get('/delete/{id}', 'destroy');
+});
+
+Route::prefix('service')->controller(ServiceController::class)->middleware(['auth'])->group(function () {
+    Route::get('/all', 'index');
+    Route::get('/add', 'create');
+    Route::post('/store', 'store');
+    Route::get('/edit/{id}', 'edit');
+    Route::post('/update', 'update');
+    Route::get('/delete/{id}', 'destroy');
+});
+
+Route::prefix('offer')->controller(OfferController::class)->middleware(['auth'])->group(function () {
     Route::get('/all', 'index');
     Route::get('/add', 'create');
     Route::post('/store', 'store');
