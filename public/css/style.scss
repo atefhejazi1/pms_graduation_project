@@ -1,0 +1,576 @@
+$colorWhite: #fff;
+$colorBlue: rgb(47, 124, 255);
+
+body {
+    background-color: rgb(247, 247, 247);
+}
+.navbar {
+    direction: rtl;
+    padding: 20px 0;
+    .navbar-brand {
+        color: $colorWhite;
+        font-family: "Cairo", sans-serif;
+        font-weight: bold;
+    }
+    .navbar-nav {
+        padding: 0 10px;
+        .nav-link {
+            color: $colorWhite;
+        }
+    }
+}
+
+.carousel {
+    img {
+        height: 600px;
+    }
+}
+
+.hero_section {
+    background-color: $colorWhite;
+    padding: 50px;
+    .item {
+        direction: rtl;
+        background-color: $colorWhite;
+        padding: 50px 0;
+        h4 {
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bold;
+        }
+        .h5_word {
+            padding-top: 15px;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bolder;
+        }
+        padding-right: 50px;
+        border-bottom: rgb(47, 124, 255) 5px solid;
+    }
+    .item2 {
+        direction: rtl;
+        background-color: $colorWhite;
+        padding: 50px 0;
+        h4 {
+            font-weight: bold;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+        }
+        .h5_word {
+            padding-top: 15px;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bolder;
+        }
+        padding-right: 50px;
+        border-bottom: rgb(47, 124, 255) 5px solid;
+    }
+    .item1 {
+        direction: rtl;
+        background-color: $colorBlue;
+        h4 {
+            font-weight: bold;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+        }
+        .h5_word {
+            padding-top: 15px;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bolder;
+        }
+        padding: 50px 20px;
+        padding-right: 50px;
+        color: #fff;
+        border-bottom: black 5px solid;
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+    .hero_section {
+        .item {
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+        .item1 {
+            padding-right: 20px;
+
+            margin-bottom: 20px;
+        }
+        .item2 {
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .hero_section {
+        .item {
+            padding-right: 40px;
+            margin-bottom: 20px;
+        }
+        .item2 {
+            padding-right: 40px;
+            margin-bottom: 20px;
+        }
+        .item1 {
+            padding-right: 40px;
+            margin-bottom: 20px;
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .hero_section {
+        .item2 {
+            width: 207%;
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .hero_section {
+        padding-top: 0;
+        .item2 {
+            width: 100%;
+        }
+    }
+}
+
+///// About section
+
+.About {
+    background-color: $colorWhite;
+    padding: 30px 0 50px;
+    h1 {
+        font-weight: bolder;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+    }
+    img {
+        width: 80%;
+        height: 350px;
+    }
+    .grid_data {
+        direction: rtl;
+        padding-top: 20px;
+
+        p {
+            padding: 10px 0;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+        }
+
+        .btn1 {
+            background-color: $colorBlue;
+            color: $colorWhite;
+            padding: 5px 20px;
+            border: $colorBlue solid;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            &:hover {
+                background-color: $colorWhite;
+                color: $colorBlue;
+                border: $colorBlue solid;
+            }
+        }
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+    .About {
+        img {
+            width: 100%;
+            height: 350px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .About {
+        img {
+            width: 100%;
+            height: 350px;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .About {
+        padding: 30px 0 50px;
+        img {
+            width: 100%;
+            height: 400px;
+        }
+        .grid_data {
+            padding-top: 0px;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .About {
+        padding: 30px 0 50px;
+        img {
+            width: 80%;
+            height: 350px;
+        }
+        .grid_data {
+            padding-top: 20px;
+        }
+    }
+}
+
+////// Services section
+
+.Services {
+    padding-bottom: 50px;
+    h1 {
+        padding: 30px 0 5px;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        font-weight: bold;
+    }
+    h2 {
+        margin-bottom: 50px;
+        width: 5%;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        border-bottom: solid $colorBlue 3px;
+    }
+
+    .data_inner_center {
+        border: $colorBlue 5px dashed;
+        direction: rtl;
+        padding: 80px 50px 50px;
+        height: 580px;
+        width: 80%;
+        border-radius: 10px;
+        background-color: $colorWhite;
+        img {
+            height: 100px;
+            width: 100px;
+        }
+        h3{
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bold;
+            width: 80%;
+        }
+        p {
+            padding: 20px 0 25px;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bolder;
+        }
+
+        h5 {
+            color: $colorBlue;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bolder;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+
+    .data_inner {
+        border: $colorBlue 5px dashed;
+        direction: rtl;
+        padding: 50px;
+        height: 500px;
+        margin-top: 30px;
+        width: 80%;
+        border-radius: 10px;
+        background-color: $colorWhite;
+        img {
+            height: 100px;
+            width: 100px;
+        }
+        h3{
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bold;
+        }
+        p {
+            padding: 15px 0 25px;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bolder;
+        }
+
+        h5 {
+            color: $colorBlue;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            cursor: pointer;
+            font-weight: bold;
+
+        }
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+    .Services {
+        .data_inner {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .Services {
+        .data_inner {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .Services {
+        .data_inner {
+            width: 100%;
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .Services {
+        .data_inner {
+            width: 80%;
+        }
+    }
+}
+
+// item_inner section
+
+.item_inner {
+    padding: 60px 0;
+    h1 {
+        padding: 30px 0 5px;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        font-weight: bold;
+    }
+    h2 {
+        margin-bottom: 50px;
+        width: 5%;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        border-bottom: solid $colorBlue 3px;
+    }
+    .item {
+        direction: rtl;
+        width: 80%;
+        height: 500px;
+        background-color: $colorWhite;
+        img {
+            height: 250px;
+            width: 100%;
+            padding-bottom: 40px;
+        }
+        p{
+            width: 80%;
+            padding: 20px 0;
+        }
+
+        h5{
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bolder;
+        }
+        a{
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bolder;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+    .item_inner {
+        .item {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .item_inner {
+        .item {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .item_inner {
+        .item {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .item_inner {
+        .item {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+//// footer
+
+footer {
+    direction: rtl;
+    padding: 50px 60px;
+    background-color: midnightblue;
+    color: $colorWhite;
+    span {
+        padding-left: 20px;
+    }
+    h3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .icon {
+        display: flex;
+        i {
+            margin-left: 10px;
+            background-color: darkgray;
+            color: $colorWhite;
+            padding: 12px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover {
+                background-color: $colorWhite;
+                color: midnightblue;
+            }
+        }
+    }
+}
+
+.input_group {
+    padding: 70px 150px;
+    direction: rtl;
+    background-color: $colorBlue;
+    color: $colorWhite;
+    .input_item {
+        padding-right: 150px;
+    }
+    input {
+        width: 70%;
+        padding: 5px 2px;
+    }
+    h5{
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        font-weight: bold;
+    }
+    button {
+        padding: 5px 20px;
+        background-color: $colorWhite;
+        color: $colorBlue;
+        border: solid $colorWhite;
+
+        cursor: pointer;
+        &:hover {
+            background-color: $colorBlue;
+            color: $colorWhite;
+            border: solid $colorWhite;
+        }
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+    .input_group {
+        padding: 70px 0px;
+        .input_item {
+            padding-right: 0px;
+            padding-top: 30px;
+        }
+        input {
+            width: 60%;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .input_group {
+        padding: 70px 0px;
+        .input_item {
+            padding-right: 0px;
+            padding-top: 30px;
+        }
+        input {
+            width: 65%;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .input_group {
+        padding: 70px 0px;
+        .input_item {
+            padding-right: 0px;
+            padding-top: 30px;
+        }
+        input {
+            width: 65%;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .input_group {
+        padding: 70px 150px;
+        .input_item {
+            padding-right: 150px;
+            padding-top: 0px;
+        }
+        input {
+            width: 70%;
+            padding: 6px 4px;
+        }
+    }
+}
+
+
+
+.data_marquee{
+    padding: 40px 0;
+    .price{
+        display: flex;
+        h5{
+            text-decoration: line-through;
+            padding-top: 10px;
+            padding-left: 5px;
+        }
+
+        h4{
+            padding-left: 10px;
+        }
+    }
+}
+

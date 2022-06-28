@@ -1,10 +1,15 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\dashController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ContactController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +23,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [dashController::class, 'getNumberOfRows'])
+    ->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
 
@@ -63,3 +67,10 @@ Route::prefix('offer')->controller(OfferController::class)->middleware(['auth'])
     Route::post('/update', 'update');
     Route::get('/delete/{id}', 'destroy');
 });
+
+
+
+
+
+Route::get('/contact', [ContactController::class, 'create']);
+Route::post('/contact/store', [ContactController::class, 'store']);
