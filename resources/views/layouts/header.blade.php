@@ -19,7 +19,7 @@
 
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">نظام ادارة محطات البترول </a>
+            <a class="navbar-brand" href="#"> <img  style="width:10%; height: 10%;"src="{{ asset('img/logo/01.jpeg') }}" alt=""> نظام ادارة محطات البترول </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\service;
 use App\Http\Requests\StoreserviceRequest;
 use App\Http\Requests\UpdateserviceRequest;
+use App\Models\requestService;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -62,15 +63,54 @@ class ServiceController extends Controller
         return redirect('service/all');
     }
 
+
+    public function allServicesRequested()
+    {
+        $requestServices = RequestService::get();
+
+        return view('services.allServiceRequested', compact('requestServices'));
+    }
+
+
+    public function active($id)
+    {
+        $service = requestService::where('id', $id)->first();
+        $service->getOriginal('name');
+        $service->getOriginal('description');
+        $service->getOriginal('service_requester');
+        $service->getOriginal('serviceProvider');
+        $service->isActive = 1;
+
+        $service->save();
+        return redirect('service/allServicesRequested')->with('active', 'Your Request Done  !');;
+    }
+
+
+    public function RequestServiceStore(Request $request)
+    {
+        $service = new requestService();
+        $service->name = $request->name;
+        $service->description = $request->description;
+        $service->service_requester = $request->service_requester;
+        $service->serviceProvider = $request->serviceProvider;
+
+        $service->save();
+
+        return redirect('service/allServicesRequested')->with('statusServiceRequest', 'Please Wait To Response !');
+    }
+
+
+
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\service  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(service $service)
+    public function requestService($id)
     {
-        //
+        $service = service::where('id', $id)->first();
+        return view('services.requestService', compact('service'));
     }
 
     /**
@@ -129,5 +169,11 @@ class ServiceController extends Controller
         $service->delete();
 
         return redirect('service/all');
+    }
+
+    public function getService()
+    {
+        $services = service::paginate(10);
+        return view('services.getService', compact('services'));
     }
 }

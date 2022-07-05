@@ -6,6 +6,7 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Models\Permission;
@@ -30,6 +31,11 @@ Route::get('/dashboard', [dashController::class, 'getNumberOfRows'])
     ->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
+
+
+Route::prefix('users')->controller(UserController::class)->middleware(['auth'])->group(function () {
+    Route::get('/allUsers', 'index');
+});
 
 
 Route::prefix('department')->controller(DepartmentController::class)->middleware(['auth'])->group(function () {
@@ -57,7 +63,13 @@ Route::prefix('service')->controller(ServiceController::class)->middleware(['aut
     Route::get('/edit/{id}', 'edit');
     Route::post('/update', 'update');
     Route::get('/delete/{id}', 'destroy');
+    Route::get('/getService', 'getService');
+    Route::get('/requestService/{id}', 'requestService');
+    Route::post('/RequestServiceStore', 'RequestServiceStore');
+    Route::get('/allServicesRequested', 'allServicesRequested');
+    Route::get('/active/{id}', 'active');
 });
+
 
 Route::prefix('offer')->controller(OfferController::class)->middleware(['auth'])->group(function () {
     Route::get('/all', 'index');
