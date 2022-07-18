@@ -6,13 +6,13 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="image/pexels-erik-mclean-5763199.jpg" class="d-block w-100" alt="...">
+                <img src="images/petrol-stations/04.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="image/pexels-justin-choi-5846962.jpg" class="d-block w-100" alt="...">
+                <img src="images/petrol-stations/08.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="image/pexels-sergio-souza-3602009.jpg" class="d-block w-100" alt="...">
+                <img src="images/petrol-stations/03.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -60,7 +60,7 @@
     </div>
 </section>
 
-<section class="About">
+<section class="About" id="about">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6">
@@ -81,168 +81,157 @@
 </section>
 
 
-<section class="input_group">
+<section class="Services" id="our-services">
+
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-                <h5>تواصل معنا عبر الايميل </h5>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-6">
-                <div class="input_item">
-                    <form>
-                        <input type="email" placeholder="ادخل الايميل">
-                        <button>ارسال</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</section>
-
-
-<section class="Services">
-    <center>
         <h1>خدماتنا</h1>
         <h2></h2>
-    </center>
-    <center>
-        <div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="data_inner">
-                            <center>
-                                <img src="image/blog26.png" alt="">
-                                <h3>خدمة ترخيص المحطات</h3>
-                                <p>تقدم هذه الخدمة تسويق مباشر لأصحاب المحطات وترويج خدماتهم المتنوعة عبر وسائل
-                                    التواصل الإجتماعي للوصول لأكبر عدد من الزبائن</p>
-                            </center>
-                        </div>
+        <center>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="data_inner">
+                        <center>
+                        <img src="images/participants-logos/fares.jpg" class="d-block w-100" alt="...">
+                            <h3>خدمة ترخيص المحطات</h3>
+                            <p>تقدم هذه الخدمة تسويق مباشر لأصحاب المحطات وترويج خدماتهم المتنوعة عبر وسائل
+                                التواصل الإجتماعي للوصول لأكبر عدد من الزبائن</p>
+                        </center>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="data_inner_center">
-                            <center>
-                                <img src="image/blog26.png" alt="">
-                                <h3>خدمة فحص الوقود</h3>
-                                <p>تحديد جودة وجودة البنزين ومحتوى الكبريت ونسبة التبخر عند 70 درجة ، ونسبة التبخر
-                                    عند 100 درجة ، ونسبة التبخر عند 150 درجة ، والمظهر ، والكثافة ، وضغط البخار ،
-                                    ومؤشر قفل البخار ، وكمية البنزين ، ومحتوى الاوكسجين</p>
-                            </center>
-                        </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="data_inner">
+                        <center>
+                        <img src="images/participants-logos/fares.jpg" class="d-block w-100" alt="...">
+                            <h3>خدمة فحص الوقود</h3>
+                            <p>تحديد جودة وجودة البنزين ومحتوى الكبريت ونسبة التبخر عند 70 درجة ، ونسبة التبخر
+                                عند 100 درجة ، ونسبة التبخر عند 150 درجة ، والمظهر ، والكثافة ، وضغط البخار ،
+                                ومؤشر قفل البخار ، وكمية البنزين ، ومحتوى الاوكسجين</p>
+                        </center>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="data_inner">
-                            <center>
-                                <img src="image/blog26.png" alt="">
-                                <h3>خدمات تسويقية لأصحاب المحطات</h3>
-                                <p>تمكن الخدمة متلقيها من استصدار رخصة لافتتاح وتشغيل محطة وقود من الفئات أ، ب، ج
-                                    الترخيص تبعاً لمساحة المحطة حيث تتم عبر تعبئة نموذج الموافقة من قبل والترخيص
-                                </p>
-                            </center>
-                        </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="data_inner">
+                        <center>
+                        <img src="images/participants-logos/fares.jpg" class="d-block w-100" alt="...">
+                            <h3>خدمات تسويقية لأصحاب المحطات</h3>
+                            <p>تمكن الخدمة متلقيها من استصدار رخصة لافتتاح وتشغيل محطة وقود من الفئات أ، ب، ج
+                                الترخيص تبعاً لمساحة المحطة حيث تتم عبر تعبئة نموذج الموافقة من قبل والترخيص
+                            </p>
+                        </center>
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
     </center>
 
 </section>
 
 
-<marquee style="border:solid rgb(47 , 124 , 255); background-color: rgb(47 , 124 , 255); color: #fff;">
+<marquee>
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
-                <div class="data_marquee">
-                    <h1>البترول</h1>
-                    <div class="price">
-                        <h4>50.0$</h4>
-                        <h5>90.0$</h5>
-                    </div>
-                </div>
+            <div class="col-sm-2">
+                <img src="images/participants-logos/Aboasi.jpg" class="d-block w-100" alt="...">
             </div>
-            <div class="col-sm-3">
-                <div class="data_marquee">
-                    <h1>غاز الطبخ</h1>
-                    <div class="price">
-                        <h4>60.0$</h4>
-                        <h5>64.0$</h5>
-                    </div>
-                </div>
+            <div class="col-sm-2">
+                <img src="images/participants-logos/alhelou.jpg" class="d-block w-100" alt="...">
+
             </div>
-            <div class="col-sm-3">
-                <div class="data_marquee">
-                    <h1>السولار</h1>
-                    <div class="price">
-                        <h4>70.0$</h4>
-                        <h5>100.0$</h5>
-                    </div>
-                </div>
+            <div class="col-sm-2">
+                <img src="images/participants-logos/fares.jpg" class="d-block w-100" alt="...">
             </div>
-            <div class="col-sm-3">
-                <div class="data_marquee">
-                    <h1>مضخة البنزين</h1>
-                    <div class="price">
-                        <h4>80.0$</h4>
-                        <h5>120.0$</h5>
-                    </div>
-                </div>
+            <div class="col-sm-2">
+                <img src="images/participants-logos/CivilDefense.jpg" class="d-block w-100" alt="...">
             </div>
+            <div class="col-sm-2">
+                <img src="images/participants-logos/Transport.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-sm-2">
+                <img src="images/participants-logos/Economy.jpg" class="d-block w-100" alt="...">
+            </div>
+
         </div>
     </div>
 </marquee>
 
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d54411.061168327025!2d34.48504323552029!3d31.53263685884611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2K7YsdmK2LfYqSDZhdit2LfYp9iqINin2YTZiNmC2YjYryDZgdmKINi62LLYqQ!5e0!3m2!1sar!2s!4v1656347956190!5m2!1sar!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<center>
-    <section class="item_inner">
-        <center>
-            <h1>اخبارنا</h1>
-            <h2></h2>
-        </center>
 
-        <div class="container">
-            <div class="row">
-                <div class="col=sm-12 col-md-6 col-lg-4">
-                    <div class="item">
-                        <center>
-                            <img src="image/blog1.png" alt="">
-                            <h5>أرامكو تعلن أسعار البنزين الجديدة</h5>
-                            <p>شهدت اسعار المحروقات في فلسطين لشهر 6 حزيران 2022 ارتفاعا ملحوظا لا سيما اسعار البنزين
-                                والغاز في الضفة الغربية وقطاع غزة.</p>
-                            <a href="https://arabic.cnn.com/business/article/2022/06/11/saudi-arabia-aramco-prices-june" target="block">قراءة المزيد</a>
+<section class="item_inner" id="our-news">
 
-                        </center>
-                    </div>
+    <div class="container">
+        <h1>اخبارنا</h1>
+        <h2></h2>
+        <div class="row">
+            <div class="col=sm-12 col-md-6 col-lg-4">
+                <div class="item">
+                    <center>
+                    <img src="image/blog1.png" alt="">
+                        <h5>أرامكو تعلن أسعار البنزين الجديدة</h5>
+                        <p>شهدت اسعار المحروقات في فلسطين لشهر 6 حزيران 2022 ارتفاعا ملحوظا لا سيما اسعار البنزين
+                            والغاز في الضفة الغربية وقطاع غزة.</p>
+                        <!-- <a href="https://arabic.cnn.com/business/article/2022/06/11/saudi-arabia-aramco-prices-june" target="block">قراءة المزيد</a> -->
+
+                    </center>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="item">
-                        <center>
-                            <img src="image/blg4.png" alt="">
-                            <h5>أسعار البنزين العالمية</h5>
-                            <p>شهدت اسعار المحروقات في فلسطين لشهر 6 حزيران 2022 ارتفاعا ملحوظا لا سيما اسعار البنزين
-                                والغاز في الضفة الغربية وقطاع غزة.</p>
-                            <a href="https://safa.ps/p/328999" target="block">قراءة المزيد</a>
-                        </center>
-                    </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="item">
+                    <center>
+                        <img src="image/blg4.png" alt="">
+                        <h5>أسعار البنزين العالمية</h5>
+                        <p>شهدت اسعار المحروقات في فلسطين لشهر 6 حزيران 2022 ارتفاعا ملحوظا لا سيما اسعار البنزين
+                            والغاز في الضفة الغربية وقطاع غزة.</p>
+                        <!-- <a href="https://safa.ps/p/328999" target="block">قراءة المزيد</a> -->
+                    </center>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <div class="item">
-                        <center>
-                            <img src="image/blog2.png" alt="">
-                            <h5>أسعار الوقود والغاز للمستهلك</h5>
-                            <p>شهدت اسعار المحروقات في فلسطين لشهر 6 حزيران 2022 ارتفاعا ملحوظا لا سيما اسعار البنزين
-                                والغاز في الضفة الغربية وقطاع غزة.</p>
-                            <a href="https://www.al-ayyam.ps/ar_category.php?id=13bc3y80835y13bc3&c_type=1" target="block">قراءة المزيد</a>
-                        </center>
-                    </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="item">
+                    <center>
+                        <img src="image/blog2.png" alt="">
+                        <h5>أسعار الوقود والغاز للمستهلك</h5>
+                        <p>شهدت اسعار المحروقات في فلسطين لشهر 6 حزيران 2022 ارتفاعا ملحوظا لا سيما اسعار البنزين
+                            والغاز في الضفة الغربية وقطاع غزة.</p>
+                        <!-- <a href="https://www.al-ayyam.ps/ar_category.php?id=13bc3y80835y13bc3&c_type=1" target="block">قراءة المزيد</a> -->
+                    </center>
                 </div>
             </div>
         </div>
-    </section>
-</center>
+    </div>
+</section>
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d54411.061168327025!2d34.48504323552029!3d31.53263685884611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2K7YsdmK2LfYqSDZhdit2LfYp9iqINin2YTZiNmC2YjYryDZgdmKINi62LLYqQ!5e0!3m2!1sar!2s!4v1656347956190!5m2!1sar!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <center>
+            <div class="form_contact">
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" placeholder="الأسم الأول" class="form-control" id="inputEmail4">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" placeholder="الأسم الثاني" class="form-control " id="inputPassword4">
+                    </div>
+                    <div class="col-12">
+                        <input type="email" class="form-control" id="inputAddress" placeholder="البريد الألكتروني">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="رقم الهاتف">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" class="form-control w-100" id="inputCity" placeholder="الموضوع" style="padding-bottom:100px; width: 100%;">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn send-message w-100">أرسل الرسالة</button>
+                    </div>
+                </form>
+            </div>
+        </center>
+    </div>
+</section>
+
 
 @include('layouts.footer')

@@ -1,22 +1,46 @@
 $colorWhite: #fff;
-$colorBlue: #E5290F;
-// $colorBlue: rgb(47, 124, 255);
+$primary-color: #2d2c97;
+$secondary-color: #e5290f;
+// $primary-color: #e5290f;
+// $primary-color: rgb(47, 124, 255);
 
 body {
     background-color: rgb(247, 247, 247);
 }
+
 .navbar {
     direction: rtl;
-    padding: 20px 0;
+    padding: 7px 0;
+    background-color: #2d2c97;
+    transition: all 0.5s linear;
     .navbar-brand {
         color: $colorWhite;
         font-family: "Cairo", sans-serif;
         font-weight: bold;
+        font-size: 16px;
+        img {
+            width: 50px;
+            margin-left: 10px;
+        }
     }
-    .navbar-nav {
-        padding: 0 10px;
-        .nav-link {
-            color: $colorWhite;
+
+    .navbar-collapse {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $colorWhite;
+                    font-size: 15px;
+                    margin-left: 10px;
+                    width: 100%;
+                    font-weight: bold;
+                    font-family: "Cairo", sans-serif;
+                }
+
+                .active {
+                    color: $secondary-color;
+                    font-size: 16px;
+                }
+            }
         }
     }
 }
@@ -68,7 +92,7 @@ body {
     }
     .item1 {
         direction: rtl;
-        background-color: $colorBlue;
+        background-color: #2d2c97;
         h4 {
             font-weight: bold;
             font-family: "Almarai", sans-serif;
@@ -111,15 +135,12 @@ body {
     .hero_section {
         .item {
             padding-right: 40px;
-            margin-bottom: 20px;
         }
         .item2 {
             padding-right: 40px;
-            margin-bottom: 20px;
         }
         .item1 {
             padding-right: 40px;
-            margin-bottom: 20px;
         }
     }
 }
@@ -145,7 +166,7 @@ body {
 
 .About {
     background-color: $colorWhite;
-    padding: 30px 0 50px;
+    padding: 150px 0 50px !important;
     h1 {
         font-weight: bolder;
         font-family: "Almarai", sans-serif;
@@ -166,17 +187,13 @@ body {
         }
 
         .btn1 {
-            background-color: $colorBlue;
+            background-color: $primary-color;
             color: $colorWhite;
             padding: 5px 20px;
-            border: $colorBlue solid;
+            border: $primary-color solid;
             font-family: "Almarai", sans-serif;
             font-family: "Cairo", sans-serif;
-            &:hover {
-                background-color: $colorWhite;
-                color: $colorBlue;
-                border: $colorBlue solid;
-            }
+          
         }
     }
 }
@@ -232,6 +249,7 @@ body {
 ////// Services section
 
 .Services {
+    direction: rtl;
     padding-bottom: 50px;
     h1 {
         padding: 30px 0 5px;
@@ -240,62 +258,26 @@ body {
         font-weight: bold;
     }
     h2 {
-        margin-bottom: 50px;
-        width: 5%;
+        width: 10%;
         font-family: "Almarai", sans-serif;
         font-family: "Cairo", sans-serif;
-        border-bottom: solid $colorBlue 3px;
-    }
-
-    .data_inner_center {
-        border: $colorBlue 5px dashed;
-        direction: rtl;
-        padding: 80px 50px 50px;
-        height: 580px;
-        width: 80%;
-        border-radius: 10px;
-        background-color: $colorWhite;
-        img {
-            height: 100px;
-            width: 100px;
-        }
-        h3{
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            font-weight: bold;
-            width: 80%;
-        }
-        p {
-            padding: 20px 0 25px;
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            font-weight: bolder;
-        }
-
-        h5 {
-            color: $colorBlue;
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            font-weight: bolder;
-            font-weight: bold;
-            cursor: pointer;
-        }
+        border-bottom: solid $primary-color 3px;
     }
 
     .data_inner {
-        border: $colorBlue 5px dashed;
+        box-shadow: 1px 1px 20px 6px #dcdcf4;
         direction: rtl;
         padding: 50px;
         height: 500px;
         margin-top: 30px;
-        width: 80%;
         border-radius: 10px;
         background-color: $colorWhite;
         img {
-            height: 100px;
-            width: 100px;
+            height: 200px;
+            width: 200px;
+            padding-bottom: 30px;
         }
-        h3{
+        h3 {
             font-family: "Almarai", sans-serif;
             font-family: "Cairo", sans-serif;
             font-weight: bold;
@@ -308,12 +290,11 @@ body {
         }
 
         h5 {
-            color: $colorBlue;
+            color: $primary-color;
             font-family: "Almarai", sans-serif;
             font-family: "Cairo", sans-serif;
             cursor: pointer;
             font-weight: bold;
-
         }
     }
 }
@@ -348,14 +329,26 @@ body {
 @media (min-width: 992px) {
     .Services {
         .data_inner {
-            width: 80%;
+            width: 100%;
         }
+    }
+}
+
+marquee {
+    background-color: $colorWhite;
+    padding: 50px 0;
+    img {
+        transition: all 0.5s linear;
+    }
+    img:hover {
+        transform: scale(1.2);
     }
 }
 
 // item_inner section
 
 .item_inner {
+    direction: rtl;
     padding: 60px 0;
     h1 {
         padding: 30px 0 5px;
@@ -365,14 +358,14 @@ body {
     }
     h2 {
         margin-bottom: 50px;
-        width: 5%;
+        width: 8%;
         font-family: "Almarai", sans-serif;
         font-family: "Cairo", sans-serif;
-        border-bottom: solid $colorBlue 3px;
+        border-bottom: solid $primary-color 3px;
     }
     .item {
         direction: rtl;
-        width: 80%;
+        // width: 80%;
         height: 500px;
         background-color: $colorWhite;
         img {
@@ -380,17 +373,17 @@ body {
             width: 100%;
             padding-bottom: 40px;
         }
-        p{
+        p {
             width: 80%;
             padding: 20px 0;
         }
 
-        h5{
+        h5 {
             font-family: "Almarai", sans-serif;
             font-family: "Cairo", sans-serif;
             font-weight: bolder;
         }
-        a{
+        a {
             font-family: "Almarai", sans-serif;
             font-family: "Cairo", sans-serif;
             font-weight: bolder;
@@ -436,6 +429,23 @@ body {
     }
 }
 
+.contact {
+    direction: rtl;
+    padding: 40px 0;
+    .form_contact {
+        padding: 80px 0;
+        input {
+            padding: 10px;
+        }
+        .send-message {
+            font-size: 16px;
+            padding: 10px 0;
+            background-color: $primary-color;
+            color: $colorWhite;
+        }
+    }
+}
+
 //// footer
 
 footer {
@@ -471,7 +481,7 @@ footer {
 .input_group {
     padding: 70px 150px;
     direction: rtl;
-    background-color: $colorBlue;
+    background-color: $primary-color;
     color: $colorWhite;
     .input_item {
         padding-right: 150px;
@@ -480,7 +490,7 @@ footer {
         width: 70%;
         padding: 5px 2px;
     }
-    h5{
+    h5 {
         font-family: "Almarai", sans-serif;
         font-family: "Cairo", sans-serif;
         font-weight: bold;
@@ -488,12 +498,12 @@ footer {
     button {
         padding: 5px 20px;
         background-color: $colorWhite;
-        color: $colorBlue;
+        color: $primary-color;
         border: solid $colorWhite;
 
         cursor: pointer;
         &:hover {
-            background-color: $colorBlue;
+            background-color: $primary-color;
             color: $colorWhite;
             border: solid $colorWhite;
         }
@@ -557,21 +567,18 @@ footer {
     }
 }
 
-
-
-.data_marquee{
+.data_marquee {
     padding: 40px 0;
-    .price{
+    .price {
         display: flex;
-        h5{
+        h5 {
             text-decoration: line-through;
             padding-top: 10px;
             padding-left: 5px;
         }
 
-        h4{
+        h4 {
             padding-left: 10px;
         }
     }
 }
-

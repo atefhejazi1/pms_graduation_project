@@ -4,18 +4,31 @@ body {
 
 .navbar {
   direction: rtl;
-  padding: 20px 0;
+  padding: 7px 0;
+  background-color: #2d2c97;
+  transition: all 0.5s linear;
 }
 .navbar .navbar-brand {
   color: #fff;
   font-family: "Cairo", sans-serif;
   font-weight: bold;
+  font-size: 16px;
 }
-.navbar .navbar-nav {
-  padding: 0 10px;
+.navbar .navbar-brand img {
+  width: 50px;
+  margin-left: 10px;
 }
-.navbar .navbar-nav .nav-link {
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
   color: #fff;
+  font-size: 15px;
+  margin-left: 10px;
+  width: 100%;
+  font-weight: bold;
+  font-family: "Cairo", sans-serif;
+}
+.navbar .navbar-collapse .navbar-nav .nav-item .active {
+  color: #e5290f;
+  font-size: 16px;
 }
 
 .carousel img {
@@ -64,7 +77,7 @@ body {
 }
 .hero_section .item1 {
   direction: rtl;
-  background-color: rgb(47, 124, 255);
+  background-color: #2d2c97;
   padding: 50px 20px;
   padding-right: 50px;
   color: #fff;
@@ -99,15 +112,12 @@ body {
 @media (min-width: 576px) {
   .hero_section .item {
     padding-right: 40px;
-    margin-bottom: 20px;
   }
   .hero_section .item2 {
     padding-right: 40px;
-    margin-bottom: 20px;
   }
   .hero_section .item1 {
     padding-right: 40px;
-    margin-bottom: 20px;
   }
 }
 @media (min-width: 768px) {
@@ -125,7 +135,7 @@ body {
 }
 .About {
   background-color: #fff;
-  padding: 30px 0 50px;
+  padding: 150px 0 50px !important;
 }
 .About h1 {
   font-weight: bolder;
@@ -146,17 +156,12 @@ body {
   font-family: "Cairo", sans-serif;
 }
 .About .grid_data .btn1 {
-  background-color: rgb(47, 124, 255);
+  background-color: #2d2c97;
   color: #fff;
   padding: 5px 20px;
-  border: rgb(47, 124, 255) solid;
+  border: #2d2c97 solid;
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
-}
-.About .grid_data .btn1:hover {
-  background-color: #fff;
-  color: rgb(47, 124, 255);
-  border: rgb(47, 124, 255) solid;
 }
 
 @media (max-width: 576px) {
@@ -196,6 +201,7 @@ body {
   }
 }
 .Services {
+  direction: rtl;
   padding-bottom: 50px;
 }
 .Services h1 {
@@ -205,58 +211,24 @@ body {
   font-weight: bold;
 }
 .Services h2 {
-  margin-bottom: 50px;
-  width: 5%;
+  width: 10%;
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
-  border-bottom: solid rgb(47, 124, 255) 3px;
-}
-.Services .data_inner_center {
-  border: rgb(47, 124, 255) 5px dashed;
-  direction: rtl;
-  padding: 80px 50px 50px;
-  height: 580px;
-  width: 80%;
-  border-radius: 10px;
-  background-color: #fff;
-}
-.Services .data_inner_center img {
-  height: 100px;
-  width: 100px;
-}
-.Services .data_inner_center h3 {
-  font-family: "Almarai", sans-serif;
-  font-family: "Cairo", sans-serif;
-  font-weight: bold;
-  width: 80%;
-}
-.Services .data_inner_center p {
-  padding: 20px 0 25px;
-  font-family: "Almarai", sans-serif;
-  font-family: "Cairo", sans-serif;
-  font-weight: bolder;
-}
-.Services .data_inner_center h5 {
-  color: rgb(47, 124, 255);
-  font-family: "Almarai", sans-serif;
-  font-family: "Cairo", sans-serif;
-  font-weight: bolder;
-  font-weight: bold;
-  cursor: pointer;
+  border-bottom: solid #2d2c97 3px;
 }
 .Services .data_inner {
-  border: rgb(47, 124, 255) 5px dashed;
+  box-shadow: 1px 1px 20px 6px #dcdcf4;
   direction: rtl;
   padding: 50px;
   height: 500px;
   margin-top: 30px;
-  width: 80%;
   border-radius: 10px;
   background-color: #fff;
 }
 .Services .data_inner img {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
+  padding-bottom: 30px;
 }
 .Services .data_inner h3 {
   font-family: "Almarai", sans-serif;
@@ -270,7 +242,7 @@ body {
   font-weight: bolder;
 }
 .Services .data_inner h5 {
-  color: rgb(47, 124, 255);
+  color: #2d2c97;
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
   cursor: pointer;
@@ -294,10 +266,22 @@ body {
 }
 @media (min-width: 992px) {
   .Services .data_inner {
-    width: 80%;
+    width: 100%;
   }
 }
+marquee {
+  background-color: #fff;
+  padding: 50px 0;
+}
+marquee img {
+  transition: all 0.5s linear;
+}
+marquee img:hover {
+  transform: scale(1.2);
+}
+
 .item_inner {
+  direction: rtl;
   padding: 60px 0;
 }
 .item_inner h1 {
@@ -308,14 +292,13 @@ body {
 }
 .item_inner h2 {
   margin-bottom: 50px;
-  width: 5%;
+  width: 8%;
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
-  border-bottom: solid rgb(47, 124, 255) 3px;
+  border-bottom: solid #2d2c97 3px;
 }
 .item_inner .item {
   direction: rtl;
-  width: 80%;
   height: 500px;
   background-color: #fff;
 }
@@ -361,6 +344,23 @@ body {
     margin-bottom: 0px;
   }
 }
+.contact {
+  direction: rtl;
+  padding: 40px 0;
+}
+.contact .form_contact {
+  padding: 80px 0;
+}
+.contact .form_contact input {
+  padding: 10px;
+}
+.contact .form_contact .send-message {
+  font-size: 16px;
+  padding: 10px 0;
+  background-color: #2d2c97;
+  color: #fff;
+}
+
 footer {
   direction: rtl;
   padding: 50px 60px;
@@ -394,7 +394,7 @@ footer .icon i:hover {
 .input_group {
   padding: 70px 150px;
   direction: rtl;
-  background-color: rgb(47, 124, 255);
+  background-color: #2d2c97;
   color: #fff;
 }
 .input_group .input_item {
@@ -412,12 +412,12 @@ footer .icon i:hover {
 .input_group button {
   padding: 5px 20px;
   background-color: #fff;
-  color: rgb(47, 124, 255);
+  color: #2d2c97;
   border: solid #fff;
   cursor: pointer;
 }
 .input_group button:hover {
-  background-color: rgb(47, 124, 255);
+  background-color: #2d2c97;
   color: #fff;
   border: solid #fff;
 }

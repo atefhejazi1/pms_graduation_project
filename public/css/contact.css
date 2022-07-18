@@ -47,28 +47,23 @@ body {
   .navbar .dropdown-menu-end {
     left: 0;
   }
-
   .navbar .nav-item .dropdown-menu {
     display: block;
     opacity: 0;
     transition: 0.3s;
     margin-top: 0;
   }
-
   .navbar .nav-item:hover .nav-link {
     color: #fff;
   }
-
   .navbar .dropdown-menu.fade-down {
     top: 80%;
     transform: rotateX(-75deg);
     transform-origin: 0% 0%;
   }
-
   .navbar .dropdown-menu.fade-up {
     top: 180%;
   }
-
   .navbar .nav-item:hover .dropdown-menu {
     transition: 0.3s;
     opacity: 1;
@@ -76,17 +71,14 @@ body {
     transform: rotateX(0deg);
     background-color: #1955cc;
   }
-
   .navbar .nav-item .dropdown-menu .dropdown-item {
     color: #fff;
     padding: 10px 10px;
   }
-
   .navbar .nav-item .dropdown-menu .dropdown-item:hover {
     background-color: #1955cc;
     opacity: 0.8;
   }
-
   .dropdown-toggle::after {
     display: none;
     margin-left: 0.255em;
