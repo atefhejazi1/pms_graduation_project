@@ -49,6 +49,8 @@
                     <span>Dashboard</span></a>
             </li>
             <!-- Nav Item - Pages Collapse Menu -->
+
+            @can('users-list')
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -64,11 +66,13 @@
                 <div id="headingUser" class="collapse" aria-labelledby="headingUser" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Users:</h6>
-                        <a class="collapse-item" href="{{ url('users/allUsers') }}">All Users</a>
+                        <!-- <a class="collapse-item" href="{{ url('users/allUsers') }}">All Users</a> -->
+                        <a class="collapse-item" href="{{ url('users') }}">All Users</a>
+                        <a class="collapse-item" href="{{ url('roles') }}">Users Roles</a>
                     </div>
                 </div>
             </li>
-
+            @endcan
             <!-- Divider -->
             <hr class="sidebar-divider">
 

@@ -11,6 +11,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -36,9 +37,9 @@ Route::get('/dashboard', [dashController::class, 'getNumberOfRows'])
 require __DIR__ . '/auth.php';
 
 
-Route::prefix('users')->controller(UserController::class)->middleware(['auth'])->group(function () {
-    Route::get('/allUsers', 'index');
-});
+// Route::prefix('users')->controller(UserController::class)->middleware(['auth'])->group(function () {
+//     Route::get('/allUsers', 'index');
+// });
 
 
 Route::prefix('department')->controller(DepartmentController::class)->middleware(['auth'])->group(function () {
@@ -117,4 +118,10 @@ Route::prefix('brand')->controller(BrandsController::class)->middleware(['auth']
     Route::get('/edit/{id}', 'edit');
     Route::post('/update', 'update');
     Route::get('/delete/{id}', 'destroy');
+});
+
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
 });
