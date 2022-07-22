@@ -50,9 +50,9 @@
                         <td>{{$requestService->serviceProvider}}</td>
 
                         @if ($requestService->isActive === 1)
-                        <td> <a href="{{ url( 'service/active/' . $requestService->id )}}" class="btn btn-primary">Active It</a> </td>
+                        <td> <a href="{{ url( 'service/active/' . $requestService->id )}}" class="btn btn-primary">Activated</a> </td>
                         @else
-                        <td> <a href="{{ url( 'service/active/' . $requestService->id )}}" class="btn btn-success">Activated</a> </td>
+                        <td> <a href="{{ url( 'service/active/' . $requestService->id )}}" class="btn btn-success">Active It</a> </td>
                         @endif
 
                     </tr>

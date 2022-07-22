@@ -72,38 +72,8 @@ body {
         padding-right: 50px;
         border-bottom: rgb(47, 124, 255) 5px solid;
     }
-    .item2 {
-        direction: rtl;
-        background-color: $colorWhite;
-        padding: 50px 0;
-        h4 {
-            font-weight: bold;
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-        }
-        .h5_word {
-            padding-top: 15px;
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            font-weight: bolder;
-        }
-        padding-right: 50px;
-        border-bottom: rgb(47, 124, 255) 5px solid;
-    }
     .item1 {
-        direction: rtl;
         background-color: #2d2c97;
-        h4 {
-            font-weight: bold;
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-        }
-        .h5_word {
-            padding-top: 15px;
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            font-weight: bolder;
-        }
         padding: 50px 20px;
         padding-right: 50px;
         color: #fff;
@@ -193,7 +163,6 @@ body {
             border: $primary-color solid;
             font-family: "Almarai", sans-serif;
             font-family: "Cairo", sans-serif;
-          
         }
     }
 }
@@ -476,6 +445,11 @@ footer {
             }
         }
     }
+
+    a {
+        text-decoration: none;
+        color: $colorWhite;
+    }
 }
 
 .input_group {
@@ -579,6 +553,88 @@ footer {
 
         h4 {
             padding-left: 10px;
+        }
+    }
+}
+
+////// Services section
+
+.offers {
+    direction: rtl;
+    padding-bottom: 50px;
+    h1 {
+        padding: 30px 0 5px;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        font-weight: bold;
+    }
+    h2 {
+        width: 11%;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        border-bottom: solid $primary-color 3px;
+    }
+
+    .data_inner {
+        box-shadow: 1px 1px 20px 6px #dcdcf4;
+        direction: rtl;
+        padding: 50px;
+        margin-top: 30px;
+        border-radius: 10px;
+        background-color: $colorWhite;
+        h4 {
+            background-color: $primary-color;
+            background: conic-gradient(from 90deg, #2d2c97, #2d2bcb);
+            text-align: center;
+            padding: 50px 20px;
+            color: $colorWhite;
+            font-weight: bold;
+        }
+        h3 {
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bold;
+        }
+        p {
+            padding: 15px 0 25px;
+            font-family: "Almarai", sans-serif;
+            font-family: "Cairo", sans-serif;
+            font-weight: bolder;
+        }
+    }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 576px) {
+    .offers {
+        .data_inner {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .offers {
+        .data_inner {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .offers {
+        .data_inner {
+            width: 100%;
+        }
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .offers {
+        .data_inner {
+            width: 100%;
         }
     }
 }

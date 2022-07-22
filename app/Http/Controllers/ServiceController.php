@@ -79,10 +79,18 @@ class ServiceController extends Controller
         $service->getOriginal('description');
         $service->getOriginal('service_requester');
         $service->getOriginal('serviceProvider');
-        $service->isActive = 1;
 
-        $service->save();
-        return redirect('service/allServicesRequested')->with('active', 'Your Request Done  !');;
+        if ($service->isActive == 1) {
+            $service->isActive = 0;
+
+            $service->save();
+            return redirect('service/allServicesRequested')->with('active', 'Your Request Service Failed  !');
+        } else {
+            $service->isActive = 1;
+
+            $service->save();
+            return redirect('service/allServicesRequested')->with('active', 'Your Request Service Done  !');
+        }
     }
 
 

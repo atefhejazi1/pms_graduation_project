@@ -1,11 +1,16 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BrandsController;
+use App\Http\Controllers\CompanyBrandsController;
 use App\Http\Controllers\dashController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -23,9 +28,7 @@ use Spatie\Permission\Models\Role;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [IndexController::class, 'allDataIndex']);
 
 Route::get('/dashboard', [dashController::class, 'getNumberOfRows'])
     ->middleware(['auth'])->name('dashboard');
@@ -56,6 +59,17 @@ Route::prefix('blog')->controller(BlogController::class)->middleware(['auth'])->
     Route::get('/delete/{id}', 'destroy');
 });
 
+Route::prefix('partner')->controller(PartnerController::class)->middleware(['auth'])->group(function () {
+    Route::get('/all', 'index');
+    Route::get('/add', 'create');
+    Route::post('/store', 'store');
+    Route::get('/edit/{id}', 'edit');
+    Route::post('/update', 'update');
+    Route::get('/delete/{id}', 'destroy');
+});
+
+
+
 Route::prefix('service')->controller(ServiceController::class)->middleware(['auth'])->group(function () {
     Route::get('/all', 'index');
     Route::get('/add', 'create');
@@ -80,9 +94,27 @@ Route::prefix('offer')->controller(OfferController::class)->middleware(['auth'])
     Route::get('/delete/{id}', 'destroy');
 });
 
+Route::prefix('messages')->controller(ContactController::class)->middleware(['auth'])->group(function () {
+    Route::get('/all', 'index');
+});
 
-
-
-
-Route::get('/contact', [ContactController::class, 'create']);
 Route::post('/contact/store', [ContactController::class, 'store']);
+
+Route::prefix('about')->controller(AboutUsController::class)->middleware(['auth'])->group(function () {
+    Route::get('/data', 'index');
+    Route::get('/add', 'create');
+    Route::post('/store', 'store');
+    Route::get('/edit/{id}', 'edit');
+    Route::post('/update', 'update');
+    Route::get('/delete/{id}', 'destroy');
+});
+
+
+Route::prefix('brand')->controller(BrandsController::class)->middleware(['auth'])->group(function () {
+    Route::get('/all', 'index');
+    Route::get('/add', 'create');
+    Route::post('/store', 'store');
+    Route::get('/edit/{id}', 'edit');
+    Route::post('/update', 'update');
+    Route::get('/delete/{id}', 'destroy');
+});

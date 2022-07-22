@@ -16,7 +16,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $messages = contact::paginate(10);
+
+        return view('messages.allMessages', compact('messages'));
     }
 
     /**
@@ -26,7 +28,6 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('contact');
     }
 
     /**
@@ -37,15 +38,30 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'firstName' => 'required|max:50',
+            'secondName' => 'required|max:50',
+            'email' => 'required',
+            'phoneNumber' => 'required|max:12',
+            'subject' => 'required',
+        ], [
+            "firstName.required" => "يرجى ملئ حقل الإسم الأول",
+            "secondName.required" => "يرجى ملئ حقل الإسم التاني",
+            "email.required" => "يرجى ملئ حقل البريد الإلكتروني",
+            "phoneNumber.required" => "يرجى ملئ حقل رقم الهاتف",
+            "subject.required" => "يرجى ملئ حقل موضوع التواصل",
+        ]);
+
         $contactMsg = new contact;
 
-        $contactMsg->name = $request->name;
+        $contactMsg->firstName = $request->firstName;
+        $contactMsg->secondName = $request->secondName;
         $contactMsg->email = $request->email;
+        $contactMsg->phoneNumber = $request->phoneNumber;
         $contactMsg->subject = $request->subject;
-        $contactMsg->description = $request->description;
         $contactMsg->save();
 
-        return redirect('contact');
+        return redirect('/')->with('contactMsg', 'سيتم التواصل معكم في أقرب وقت ممكن , مع تحيات أسرة إدارة محطات الوقود !!');;
     }
 
     /**

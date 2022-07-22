@@ -57,42 +57,12 @@ body {
   font-family: "Cairo", sans-serif;
   font-weight: bolder;
 }
-.hero_section .item2 {
-  direction: rtl;
-  background-color: #fff;
-  padding: 50px 0;
-  padding-right: 50px;
-  border-bottom: rgb(47, 124, 255) 5px solid;
-}
-.hero_section .item2 h4 {
-  font-weight: bold;
-  font-family: "Almarai", sans-serif;
-  font-family: "Cairo", sans-serif;
-}
-.hero_section .item2 .h5_word {
-  padding-top: 15px;
-  font-family: "Almarai", sans-serif;
-  font-family: "Cairo", sans-serif;
-  font-weight: bolder;
-}
 .hero_section .item1 {
-  direction: rtl;
   background-color: #2d2c97;
   padding: 50px 20px;
   padding-right: 50px;
   color: #fff;
   border-bottom: black 5px solid;
-}
-.hero_section .item1 h4 {
-  font-weight: bold;
-  font-family: "Almarai", sans-serif;
-  font-family: "Cairo", sans-serif;
-}
-.hero_section .item1 .h5_word {
-  padding-top: 15px;
-  font-family: "Almarai", sans-serif;
-  font-family: "Cairo", sans-serif;
-  font-weight: bolder;
 }
 
 @media (max-width: 576px) {
@@ -390,6 +360,10 @@ footer .icon i:hover {
   background-color: #fff;
   color: midnightblue;
 }
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
 
 .input_group {
   padding: 70px 150px;
@@ -484,4 +458,69 @@ footer .icon i:hover {
 }
 .data_marquee .price h4 {
   padding-left: 10px;
+}
+
+.offers {
+  direction: rtl;
+  padding-bottom: 50px;
+}
+.offers h1 {
+  padding: 30px 0 5px;
+  font-family: "Almarai", sans-serif;
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+}
+.offers h2 {
+  width: 11%;
+  font-family: "Almarai", sans-serif;
+  font-family: "Cairo", sans-serif;
+  border-bottom: solid #2d2c97 3px;
+}
+.offers .data_inner {
+  box-shadow: 1px 1px 20px 6px #dcdcf4;
+  direction: rtl;
+  padding: 50px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.offers .data_inner h4 {
+  background-color: #2d2c97;
+  background: conic-gradient(from 90deg, #2d2c97, #2d2bcb);
+  text-align: center;
+  padding: 50px 20px;
+  color: #fff;
+  font-weight: bold;
+}
+.offers .data_inner h3 {
+  font-family: "Almarai", sans-serif;
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+}
+.offers .data_inner p {
+  padding: 15px 0 25px;
+  font-family: "Almarai", sans-serif;
+  font-family: "Cairo", sans-serif;
+  font-weight: bolder;
+}
+
+@media (max-width: 576px) {
+  .offers .data_inner {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 576px) {
+  .offers .data_inner {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .offers .data_inner {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .offers .data_inner {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
