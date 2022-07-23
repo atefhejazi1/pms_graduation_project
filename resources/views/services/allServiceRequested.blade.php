@@ -32,7 +32,9 @@
                         <th scope="col">Description</th>
                         <th scope="col">Service Requester</th>
                         <th scope="col">Service Provider</th>
+                        @can('services-activation')
                         <th scope="col">Active</th>
+                        @endcan
                     </tr>
                 </thead>
                 <tbody>
@@ -48,13 +50,13 @@
                         <td>{{$requestService->description}}</td>
                         <td>{{$requestService->service_requester}}</td>
                         <td>{{$requestService->serviceProvider}}</td>
-
+                        @can('services-activation')
                         @if ($requestService->isActive === 1)
                         <td> <a href="{{ url( 'service/active/' . $requestService->id )}}" class="btn btn-primary">Activated</a> </td>
                         @else
                         <td> <a href="{{ url( 'service/active/' . $requestService->id )}}" class="btn btn-success">Active It</a> </td>
                         @endif
-
+                        @endcan
                     </tr>
                     @endforeach
 

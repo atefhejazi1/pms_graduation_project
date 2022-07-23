@@ -67,12 +67,19 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Users:</h6>
                         <!-- <a class="collapse-item" href="{{ url('users/allUsers') }}">All Users</a> -->
+                        @can('users-all')
                         <a class="collapse-item" href="{{ url('users') }}">All Users</a>
+                        @endcan
+                        @can('roles-all')
                         <a class="collapse-item" href="{{ url('roles') }}">Users Roles</a>
+                        @endcan
                     </div>
                 </div>
             </li>
             @endcan
+
+
+            @can('brands-list')
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -90,13 +97,20 @@
                 <div id="collapseCompanyBrands" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Brands :</h6>
+                        @can('brands-all')
                         <a class="collapse-item" href="{{ url('brand/all') }}">All Brands</a>
+                        @endcan
+
+                        @can('brands-create')
                         <a class="collapse-item" href="{{ url('brand/add') }}">Add Brand</a>
+                        @endcan
 
                     </div>
                 </div>
             </li>
+            @endcan
 
+            @can('about-list')
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -114,13 +128,19 @@
                 <div id="collapseAboutUs" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom About Us :</h6>
+                        @can('about-all')
                         <a class="collapse-item" href="{{ url('about/data') }}">About Us Data</a>
+                        @endcan
+                        @can('about-create')
                         <a class="collapse-item" href="{{ url('about/add') }}">Add About Us Data</a>
+                        @endcan
 
                     </div>
                 </div>
             </li>
+            @endcan
 
+            @can('departments-list')
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -139,12 +159,18 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Departments:</h6>
+                        @can('departments-all')
                         <a class="collapse-item" href="{{ url('department/all') }}">All Departments</a>
+                        @endcan
+                        @can('departments-create')
                         <a class="collapse-item" href="{{ url('department/add') }}">Add New Department</a>
+                        @endcan
                     </div>
                 </div>
             </li>
+            @endcan
 
+            @can('blogs-list')
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -155,12 +181,19 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Blogs:</h6>
+                        @can('blogs-all')
                         <a class="collapse-item" href="{{ url('blog/all') }}">All Blogs</a>
+                        @endcan
+                        @can('blogs-create')
                         <a class="collapse-item" href="{{ url('blog/add') }}">Add New Blog</a>
+                        @endcan
 
                     </div>
                 </div>
             </li>
+            @endcan
+
+            @can('partners-list')
 
 
             <!-- Divider -->
@@ -180,13 +213,19 @@
                 <div id="collapsePartners" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Partners:</h6>
+                        @can('partners-all')
                         <a class="collapse-item" href="{{ url('partner/all') }}">All Partners</a>
+                        @endcan
+                        @can('partners-create')
                         <a class="collapse-item" href="{{ url('partner/add') }}">Add New Partners</a>
+                        @endcan
                     </div>
                 </div>
             </li>
+            @endcan
 
 
+            @can('services-list')
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -204,17 +243,26 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Services:</h6>
+                        @can('services-all')
                         <a class="collapse-item" href="{{ url('service/all') }}">All Services</a>
+                        @endcan
+                        @can('services-create')
                         <a class="collapse-item" href="{{ url('service/add') }}">Add New Service</a>
+                        @endcan
+                        @can('services-request')
                         <a class="collapse-item" href="{{ url('service/getService') }}">Request Service</a>
+                        @endcan
+                        @can('services-requested-all')
                         <a class="collapse-item" href="{{ url('service/allServicesRequested') }}">All Services Requested</a>
-                        <!-- <div class="collapse-divider"></div> -->
+                        @endcan
 
                     </div>
                 </div>
             </li>
+            @endcan
 
 
+            @can('offers-list')
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -232,13 +280,20 @@
                 <div id="collapseOffers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Offers:</h6>
+                        @can('offers-all')
                         <a class="collapse-item" href="{{ url('offer/all') }}">All Offers</a>
+                        @endcan
+                        @can('offers-create')
                         <a class="collapse-item" href="{{ url('offer/add') }}">Add New Offer</a>
+                        @endcan
                         <!-- <div class="collapse-divider"></div> -->
 
                     </div>
                 </div>
             </li>
+            @endcan
+
+            @can('messages-list')
 
 
 
@@ -259,12 +314,13 @@
                 <div id="collapseMessages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Messages:</h6>
+                        @can('messages-all')
                         <a class="collapse-item" href="{{ url('messages/all') }}">All Messages</a>
-
+                        @endcan
                     </div>
                 </div>
             </li>
-
+            @endcan
 
 
 

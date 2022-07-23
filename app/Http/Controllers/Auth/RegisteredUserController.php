@@ -22,7 +22,8 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $roles = Role::pluck('name', 'name')->all();
+        return view('auth.register' , compact('roles'));
     }
 
     /**
@@ -35,22 +36,39 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        // $request->validate([
+        //     'name' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        //     'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        // ]);
+
+        // $user = User::create([
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'password' => Hash::make($request->password),
+        // ]);
+
+        // event(new Registered($user));
+
+        // Auth::login($user);
+
+        // return redirect(RouteServiceProvider::HOME);
+
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|same:confirm-password',
+            'roles_name' => 'required'
         ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+        $input = $request->all();
 
-        event(new Registered($user));
 
-        Auth::login($user);
+        $input['password'] = Hash::make($input['password']);
 
-        return redirect(RouteServiceProvider::HOME);
+        $user = User::create($input);
+        $user->assignRole($request->input('roles_name'));
+        return redirect('/login')
+            ->with('success', 'تم اضافة المستخدم بنجاح');
     }
 }

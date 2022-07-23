@@ -89,7 +89,7 @@ class BrandsController extends Controller
     public function update(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required|unique:brands|max:70',
+            'name' => 'required|max:70',
             'description' => 'required',
         ], [
             "name.required" => "The Company Brand Name is Required.",

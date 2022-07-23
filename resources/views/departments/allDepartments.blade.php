@@ -17,8 +17,12 @@
                         <th>#</th>
                         <th>Name</th>
                         <th>Description</th>
+                        @can('departments-edit')
                         <th>Update</th>
+                        @endcan
+                        @can('departments-delete')
                         <th>Delete</th>
+                        @endcan
                     </tr>
                 </thead>
                 <tbody>
@@ -32,8 +36,12 @@
                         <td>{{ $x++}}</td>
                         <td>{{ $dept->name}}</td>
                         <td>{{ $dept->description}}</td>
+                        @can('departments-edit')
                         <td> <a href={{ url( 'department/edit/' . $dept->id )}} class="btn btn-success">Update</a> </td>
+                        @endcan
+                        @can('departments-delete')
                         <td> <a href={{ url( 'department/delete/' . $dept->id )}} class="btn btn-danger">Delete</a> </td>
+                        @endcan
                     </tr>
                     @endforeach
 

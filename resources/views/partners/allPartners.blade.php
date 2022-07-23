@@ -34,8 +34,12 @@
                         <td>{{$partner->name}}</td>
                         <td>{{$partner->description}}</td>
                         <td><img style="width:100px; height: 100px;" src={{ asset('images/partners/' . $partner->partnerPhoto )  }} alt=""></td>
+                        @can('partners-edit')
                         <td> <a href={{ url( 'partner/edit/' . $partner->id )}} class="btn btn-success">Update</a> </td>
+                        @endcan
+                        @can('partners-delete')
                         <td> <a href={{ url( 'partner/delete/' . $partner->id )}} class="btn btn-danger">Delete</a> </td>
+                        @endcan
                     </tr>
                     @endforeach
 

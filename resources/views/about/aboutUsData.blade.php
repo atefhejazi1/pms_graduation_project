@@ -18,8 +18,12 @@
                         <th>Title</th>
                         <th>Description</th>
                         <th>Photo</th>
+                        @can('about-edit')
                         <th>Update</th>
+                        @endcan
+                        @can('about-delete')
                         <th>Delete</th>
+                        @endcan
                     </tr>
                 </thead>
                 <tbody>
@@ -34,8 +38,12 @@
                         <td>{{ $aboutData->title}}</td>
                         <td>{{ $aboutData->description}}</td>
                         <td><img style="width:100px; height: 100px;" src={{ asset('images/about/' . $aboutData->aboutPhoto )  }} alt=""></td>
+                        @can('about-edit')
                         <td> <a href={{ url( 'about/edit/' . $aboutData->id )}} class="btn btn-success">Update</a> </td>
+                        @endcan
+                        @can('about-delete')
                         <td> <a href={{ url( 'about/delete/' . $aboutData->id )}} class="btn btn-danger">Delete</a> </td>
+                        @endcan
                     </tr>
                     @endforeach
 

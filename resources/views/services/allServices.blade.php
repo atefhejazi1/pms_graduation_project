@@ -18,8 +18,12 @@
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
                         <th scope="col">Photo</th>
+                        @can('services-edit')
                         <th>Update</th>
+                        @endcan
+                        @can('services-delete')
                         <th>Delete</th>
+                        @endcan
                     </tr>
                 </thead>
                 <tbody>
@@ -34,8 +38,12 @@
                         <td>{{$service->name}}</td>
                         <td>{{$service->description}}</td>
                         <td><img style="width:100px; height: 100px;" src={{ asset('images/services/' . $service->servicePhoto )  }} alt=""></td>
+                        @can('services-edit')
                         <td> <a href={{ url( 'service/edit/' . $service->id )}} class="btn btn-success">Update</a> </td>
+                        @endcan
+                        @can('services-delete')
                         <td> <a href={{ url( 'service/delete/' . $service->id )}} class="btn btn-danger">Delete</a> </td>
+                        @endcan
                     </tr>
                     @endforeach
 

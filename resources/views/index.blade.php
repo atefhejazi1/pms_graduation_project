@@ -88,13 +88,16 @@
             <div class="row">
                 @foreach($services as $service)
                 <div class="col-sm-12 col-md-6 col-lg-4">
+                    <!-- <a href="{{url('service/all')}}"> -->
                     <div class="data_inner">
                         <center>
                             <img src={{ asset('images/services/' . $service->servicePhoto )  }} alt="">
                             <h3>{{$service->name}}</h3>
                             <p> {{$service->description}}</p>
+
                         </center>
                     </div>
+                    <!-- </a> -->
                 </div>
                 @endforeach
             </div>
@@ -109,7 +112,7 @@
         <div class="row">
             @foreach ($partners as $partner)
             <div class="col-sm">
-                <img class="d-block w-100" src={{ asset('images/partners/' . $partner->partnerPhoto )  }} >
+                <img class="d-block w-100" src={{ asset('images/partners/' . $partner->partnerPhoto )  }}>
 
             </div>
             @endforeach

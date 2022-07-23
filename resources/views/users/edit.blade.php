@@ -49,6 +49,19 @@
             {!! Form::password('confirm-password', array('placeholder' => 'Confirm Password','class' => 'form-control')) !!}
         </div>
     </div>
+
+    <div class="row row-sm mg-b-20">
+        <div class="col-lg-6">
+            <label class="form-label">حالة المستخدم</label>
+            <select name="status" id="select-beast" class="form-control  nice-select  custom-select">
+                <option value="{{ $user->status}}">{{ $user->status}}</option>
+                <option value="active">active</option>
+                <option value="not active">not active</option>
+            </select>
+        </div>
+    </div>
+
+
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Role:</strong>

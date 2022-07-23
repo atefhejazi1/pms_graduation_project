@@ -19,8 +19,12 @@
                         <th scope="col">Description</th>
                         <th scope="col">Department</th>
                         <th scope="col">Photo</th>
+                        @can('blogs-edit')
                         <th>Update</th>
+                        @endcan
+                        @can('blogs-delete')
                         <th>Delete</th>
+                        @endcan
                     </tr>
                 </thead>
                 <tbody>
@@ -36,8 +40,12 @@
                         <td>{{$blog->description}}</td>
                         <td>{{ $blog->departments->name }}</td>
                         <td><img style="width:100px; height: 100px;" src={{ asset('images/blogs/' . $blog->blogPhoto )  }} alt=""></td>
+                        @can('blogs-edit')
                         <td> <a href={{ url( 'blog/edit/' . $blog->id )}} class="btn btn-success">Update</a> </td>
+                        @endcan
+                        @can('blogs-delete')
                         <td> <a href={{ url( 'blog/delete/' . $blog->id )}} class="btn btn-danger">Delete</a> </td>
+                        @endcan
                     </tr>
                     @endforeach
 

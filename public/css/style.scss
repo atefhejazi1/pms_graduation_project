@@ -220,51 +220,45 @@ body {
 .Services {
     direction: rtl;
     padding-bottom: 50px;
-    h1 {
-        padding: 30px 0 5px;
-        font-family: "Almarai", sans-serif;
-        font-family: "Cairo", sans-serif;
-        font-weight: bold;
-    }
-    h2 {
-        width: 10%;
-        font-family: "Almarai", sans-serif;
-        font-family: "Cairo", sans-serif;
-        border-bottom: solid $primary-color 3px;
-    }
-
-    .data_inner {
-        box-shadow: 1px 1px 20px 6px #dcdcf4;
-        direction: rtl;
-        padding: 50px;
-        height: 500px;
-        margin-top: 30px;
-        border-radius: 10px;
-        background-color: $colorWhite;
-        img {
-            height: 200px;
-            width: 200px;
-            padding-bottom: 30px;
-        }
-        h3 {
+        text-decoration:none;
+        h1 {
+            padding: 30px 0 5px;
             font-family: "Almarai", sans-serif;
             font-family: "Cairo", sans-serif;
             font-weight: bold;
         }
-        p {
-            padding: 15px 0 25px;
+        h2 {
+            width: 10%;
             font-family: "Almarai", sans-serif;
             font-family: "Cairo", sans-serif;
-            font-weight: bolder;
+            border-bottom: solid $primary-color 3px;
         }
 
-        h5 {
-            color: $primary-color;
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            cursor: pointer;
-            font-weight: bold;
-        }
+        .data_inner {
+            box-shadow: 1px 1px 20px 6px #dcdcf4;
+            direction: rtl;
+            padding: 50px;
+            height: 500px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: $colorWhite;
+            img {
+                height: 200px;
+                width: 200px;
+                padding-bottom: 30px;
+            }
+            h3 {
+                font-family: "Almarai", sans-serif;
+                font-family: "Cairo", sans-serif;
+                font-weight: bold;
+            }
+            p {
+                padding: 15px 0 25px;
+                font-family: "Almarai", sans-serif;
+                font-family: "Cairo", sans-serif;
+                font-weight: bolder;
+            }
+
     }
 }
 

@@ -50,11 +50,14 @@ class UserController extends Controller
         ]);
 
         $input = $request->all();
+
+
         $input['password'] = Hash::make($input['password']);
+
         $user = User::create($input);
-        $user->assignRole($request->input('roles'));
+        $user->assignRole($request->input('roles_name'));
         return redirect()->route('users.index')
-            ->with('success', 'User created successfully');
+            ->with('success', 'تم اضافة المستخدم بنجاح');
     }
 
     /**
@@ -109,7 +112,7 @@ class UserController extends Controller
         DB::table('model_has_roles')->where('model_id', $id)->delete();
         $user->assignRole($request->input('roles'));
         return redirect()->route('users.index')
-            ->with('success', 'User updated successfully');
+            ->with('success', 'تم تحديث معلومات المستخدم بنجاح');
     }
 
     /**

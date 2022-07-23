@@ -173,6 +173,7 @@ body {
 .Services {
   direction: rtl;
   padding-bottom: 50px;
+  text-decoration: none;
 }
 .Services h1 {
   padding: 30px 0 5px;
@@ -210,13 +211,6 @@ body {
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
   font-weight: bolder;
-}
-.Services .data_inner h5 {
-  color: #2d2c97;
-  font-family: "Almarai", sans-serif;
-  font-family: "Cairo", sans-serif;
-  cursor: pointer;
-  font-weight: bold;
 }
 
 @media (max-width: 576px) {

@@ -40,15 +40,31 @@
             @endif
         </td>
         <td>
+            @if ($user->status == 'active')
+            <span class="label text-success d-flex">
+                <div class="dot-label bg-success ml-1"></div>{{ $user->status }}
+            </span>
+            @else
+            <span class="label text-danger d-flex">
+                <div class="dot-label bg-danger ml-1"></div>{{ $user->status }}
+            </span>
+            @endif
+        </td>
+        <td>
+            @can('users-show')
             <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
+            @endcan
+            @can('users-edit')
             <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
+            @endcan
+            @can('users-delete')
             {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
             {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
             {!! Form::close() !!}
+            @endcan
         </td>
     </tr>
     @endforeach
 </table>
 {!! $data->render() !!}
-<p class="text-center text-primary"><small>Tutorial by rscoder.com</small></p>
 @endsection
