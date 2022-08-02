@@ -31,20 +31,20 @@
                         <a class="nav-link active " aria-current="page" href="#">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#about">من نحن </a>
+                        <a class="nav-link " href="{{ url('/') }}#about">من نحن </a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="#our-services">خدماتنا</a>
+                        <a class="nav-link" href="{{ url('/') }}#our-services">خدماتنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#our-news">اخبارنا</a>
+                        <a class="nav-link " href="{{ url('/') }}#our-news">اخبارنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#offers">عروضنا</a>
+                        <a class="nav-link " href="{{ url('/') }}#offers">عروضنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">تواصل معنا</a>
+                        <a class="nav-link" href="{{ url('/') }}#contact">تواصل معنا</a>
                     </li>
                     @if (Route::has('login'))
                     @auth

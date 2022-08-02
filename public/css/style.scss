@@ -163,6 +163,7 @@ body {
             border: $primary-color solid;
             font-family: "Almarai", sans-serif;
             font-family: "Cairo", sans-serif;
+            text-decoration: none;
         }
     }
 }
@@ -220,20 +221,22 @@ body {
 .Services {
     direction: rtl;
     padding-bottom: 50px;
-        text-decoration:none;
-        h1 {
-            padding: 30px 0 5px;
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            font-weight: bold;
-        }
-        h2 {
-            width: 10%;
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            border-bottom: solid $primary-color 3px;
-        }
+    text-decoration: none;
+    h1 {
+        padding: 30px 0 5px;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        font-weight: bold;
+    }
+    h2 {
+        width: 10%;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        border-bottom: solid $primary-color 3px;
+    }
 
+    a {
+        text-decoration: none;
         .data_inner {
             box-shadow: 1px 1px 20px 6px #dcdcf4;
             direction: rtl;
@@ -251,14 +254,16 @@ body {
                 font-family: "Almarai", sans-serif;
                 font-family: "Cairo", sans-serif;
                 font-weight: bold;
+                color: #000;
             }
             p {
                 padding: 15px 0 25px;
                 font-family: "Almarai", sans-serif;
                 font-family: "Cairo", sans-serif;
                 font-weight: bolder;
+                color: #000;
             }
-
+        }
     }
 }
 
@@ -326,32 +331,29 @@ marquee {
         font-family: "Cairo", sans-serif;
         border-bottom: solid $primary-color 3px;
     }
-    .item {
-        direction: rtl;
-        // width: 80%;
-        height: 500px;
-        background-color: $colorWhite;
-        img {
-            height: 250px;
-            width: 100%;
-            padding-bottom: 40px;
-        }
-        p {
-            width: 80%;
-            padding: 20px 0;
-        }
+    a {
+        text-decoration: none;
+        .item {
+            direction: rtl;
+            height: 500px;
+            background-color: $colorWhite;
+            img {
+                height: 250px;
+                width: 100%;
+                padding-bottom: 40px;
+            }
+            p {
+                width: 80%;
+                padding: 20px 0;
+                color: #000;
+            }
 
-        h5 {
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            font-weight: bolder;
-        }
-        a {
-            font-family: "Almarai", sans-serif;
-            font-family: "Cairo", sans-serif;
-            font-weight: bolder;
-            text-decoration: none;
-            font-size: 20px;
+            h5 {
+                font-family: "Almarai", sans-serif;
+                font-family: "Cairo", sans-serif;
+                font-weight: bolder;
+                color: #000;
+            }
         }
     }
 }
@@ -395,8 +397,23 @@ marquee {
 .contact {
     direction: rtl;
     padding: 40px 0;
+
+    h1 {
+        // padding: 30px 0 5px;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        font-weight: bold;
+    }
+    h2 {
+        margin-bottom: 50px;
+        width: 17%;
+        font-family: "Almarai", sans-serif;
+        font-family: "Cairo", sans-serif;
+        border-bottom: solid $primary-color 3px;
+    }
+
     .form_contact {
-        padding: 80px 0;
+        padding: 10px 0 80px 0;
         input {
             padding: 10px;
         }

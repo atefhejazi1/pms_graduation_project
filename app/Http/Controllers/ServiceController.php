@@ -10,6 +10,20 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('permission:services-list|services-all', ['only' => ['index']]);
+        $this->middleware('permission:services-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:services-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:services-delete', ['only' => ['destroy']]);
+        $this->middleware('permission:services-request', ['only' => ['requestService' , 'RequestServiceStore']]);
+        $this->middleware('permission:services-requested-all', ['only' => ['allServicesRequested']]);
+        $this->middleware('permission:services-activation', ['only' => ['active']]);
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *

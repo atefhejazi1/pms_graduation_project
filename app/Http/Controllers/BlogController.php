@@ -6,10 +6,19 @@ use App\Models\blog;
 use App\Http\Requests\StoreblogRequest;
 use App\Http\Requests\UpdateblogRequest;
 use App\Models\department;
+use App\Models\service;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('permission:blogs-list|blogs-all', ['only' => ['index']]);
+        $this->middleware('permission:blogs-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:blogs-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:blogs-delete', ['only' => ['destroy']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -65,9 +74,13 @@ class BlogController extends Controller
      * @param  \App\Models\blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(blog $blog)
+    public function show($id)
     {
-        //
+        $blog = blog::where('id', $id)->first();
+        $departments = department::all();
+        $services = service::all();
+        $blogs = blog::all();
+        return view('blogs.singleBlog', compact('blog', 'departments','services' , 'blogs'));
     }
 
     /**
@@ -103,7 +116,6 @@ class BlogController extends Controller
             $path = 'images/blogs';
 
             $request->blogPhoto->move($path, $file_name);
-    
         }
 
 

@@ -9,9 +9,11 @@
         <div class="pull-left">
             <h2>Users Management</h2>
         </div>
+        @can('users-create')
         <div class="pull-right">
             <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
         </div>
+        @endcan
     </div>
 </div>
 @if ($message = Session::get('success'))

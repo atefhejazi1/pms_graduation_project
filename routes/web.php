@@ -60,6 +60,9 @@ Route::prefix('blog')->controller(BlogController::class)->middleware(['auth'])->
     Route::get('/delete/{id}', 'destroy');
 });
 
+Route::get('blog/show/{id}', [BlogController::class, 'show']);
+
+
 Route::prefix('partner')->controller(PartnerController::class)->middleware(['auth'])->group(function () {
     Route::get('/all', 'index');
     Route::get('/add', 'create');
@@ -109,6 +112,9 @@ Route::prefix('about')->controller(AboutUsController::class)->middleware(['auth'
     Route::post('/update', 'update');
     Route::get('/delete/{id}', 'destroy');
 });
+
+Route::get('about/show/{id}', [AboutUsController::class, 'show']);
+
 
 
 Route::prefix('brand')->controller(BrandsController::class)->middleware(['auth'])->group(function () {

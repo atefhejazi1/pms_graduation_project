@@ -79,7 +79,7 @@
                                 </div>
                             </div>
 
-                            <div class="row row-sm mg-b-20">
+                            <!-- <div class="row row-sm mg-b-20">
                                 <div class="col-lg-6">
                                     <label class="form-label">حالة المستخدم</label>
                                     <select name="status" id="select-beast" class="form-control  nice-select  custom-select">
@@ -87,16 +87,18 @@
                                         <option value="not active">غير مفعل</option>
                                     </select>
                                 </div>
-                            </div>
+                            </div> -->
+                            <input type="hidden" name="status" value="active">
+                            <input type="hidden" name="roles_name" value="بلا صلاحية">
 
-                            <div class="row mg-b-20">
+                            <!-- <div class="row mg-b-20">
                                 <div class="col-xs-12 col-md-12">
                                     <div class="form-group">
                                         <label class="form-label"> صلاحية المستخدم</label>
                                         {!! Form::select('roles_name[]', $roles,[], array('class' => 'form-control','multiple')) !!}
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                                 <button class="btn btn-primary w-100" type="submit">تاكيد</button>
                             </div>

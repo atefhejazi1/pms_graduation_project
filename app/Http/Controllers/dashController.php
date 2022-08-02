@@ -11,11 +11,13 @@ use App\Models\partner;
 use App\Models\service;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class dashController extends Controller
 {
     public function getNumberOfRows()
     {
+
         $departmentsRows = count(Department::get());
         $departments = Department::paginate(3);
         $blogsRows = count(blog::get());

@@ -9,6 +9,15 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+
+    // function __construct()
+    // {
+    //     $this->middleware('permission:messages-list|messages-all', ['only' => ['index']]);
+    //     $this->middleware('permission:messages-create', ['only' => ['create', 'store']]);
+    //     $this->middleware('permission:messages-edit', ['only' => ['edit', 'update']]);
+    //     $this->middleware('permission:messages-delete', ['only' => ['destroy']]);
+    // }
+
     /**
      * Display a listing of the resource.
      *

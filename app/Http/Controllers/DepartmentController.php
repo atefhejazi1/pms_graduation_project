@@ -9,6 +9,16 @@ use Illuminate\Http\Request;
 
 class DepartmentController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('permission:departments-list|departments-all', ['only' => ['index']]);
+        $this->middleware('permission:departments-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:departments-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:departments-delete', ['only' => ['destroy']]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *

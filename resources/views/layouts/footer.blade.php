@@ -16,7 +16,7 @@
             <div class="col-sm-12 col-md-6 col-lg-3">
                 <h3>الخدمات</h3>
                 @foreach($services as $service)
-                <p><a href="{{url('service/all')}}">{{$service->name}}</a></p>
+                <p><a href="{{ url('service/all' )}}">{{$service->name}}</a></p>
                 @endforeach
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3">
@@ -27,7 +27,7 @@
                     <div class="col=sm-12">
                         <div class="item">
 
-                            <p><a href="{{url('blog/all')}}">{{$blog->name}}</a></p>
+                            <p><a href={{url('blog/show/' . $blog->id )}}>{{$blog->name}}</a></p>
 
                         </div>
                     </div>

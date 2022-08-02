@@ -69,9 +69,9 @@
                 <div class="grid_data">
                     <h1>{{$aboutData->title}}</h1>
                     <p>
-                        {{$aboutData->description}}
+                        {{ Str::limit($aboutData->description, 500) }}
                     </p>
-                    <button class="btn1">قراءة المزيد</button>
+                    <a href={{ url('about/show/' .$aboutData->id )}} class="btn1">قراءة المزيد</a>
                 </div>
             </div>
         </div>
@@ -88,16 +88,17 @@
             <div class="row">
                 @foreach($services as $service)
                 <div class="col-sm-12 col-md-6 col-lg-4">
-                    <!-- <a href="{{url('service/all')}}"> -->
-                    <div class="data_inner">
-                        <center>
-                            <img src={{ asset('images/services/' . $service->servicePhoto )  }} alt="">
-                            <h3>{{$service->name}}</h3>
-                            <p> {{$service->description}}</p>
+                    <a href="{{url('service/all')}}">
+                        <div class="data_inner">
+                            <center>
+                                <img src={{ asset('images/services/' . $service->servicePhoto )  }} alt="">
+                                <h3>{{$service->name}}</h3>
+                                <!-- <p> {{$service->description}}</p> -->
+                                <p> {{ Str::limit($service->description, 170) }}</p>
 
-                        </center>
-                    </div>
-                    <!-- </a> -->
+                            </center>
+                        </div>
+                    </a>
                 </div>
                 @endforeach
             </div>
@@ -131,16 +132,16 @@
         <div class="row">
             @foreach($blogs as $blog)
             <div class="col=sm-12 col-md-6 col-lg-4">
-                <div class="item">
-                    <center>
-                        <img src={{ asset('images/blogs/' . $blog->blogPhoto )  }}>
-
-                        <h5>{{$blog->name}}</h5>
-                        <p>{{$blog->description}}</p>
-                        <!-- <a href="https://arabic.cnn.com/business/article/2022/06/11/saudi-arabia-aramco-prices-june" target="block">قراءة المزيد</a> -->
-
-                    </center>
-                </div>
+                <a href={{ url('blog/show/' . $blog->id )}}>
+                    <div class="item">
+                        <center>
+                            <img src={{ asset('images/blogs/' . $blog->blogPhoto )  }}>
+                            <h5>{{$blog->name}}</h5>
+                            <!-- <p>{{$blog->description}}</p> -->
+                            <p> {{ Str::limit($blog->description, 100) }}</p>
+                        </center>
+                    </div>
+                </a>
             </div>
             @endforeach
         </div>
@@ -179,7 +180,10 @@
 
 
 <section class="contact" id="contact">
+
     <div class="container">
+        <h1>تواصل معنا </h1>
+        <h2></h2>
         @if (session('contactMsg'))
         <div class="alert alert-primary" style="direction: rtl;">
             {{ session('contactMsg') }}

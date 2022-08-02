@@ -132,6 +132,7 @@ body {
   border: #2d2c97 solid;
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
+  text-decoration: none;
 }
 
 @media (max-width: 576px) {
@@ -187,7 +188,10 @@ body {
   font-family: "Cairo", sans-serif;
   border-bottom: solid #2d2c97 3px;
 }
-.Services .data_inner {
+.Services a {
+  text-decoration: none;
+}
+.Services a .data_inner {
   box-shadow: 1px 1px 20px 6px #dcdcf4;
   direction: rtl;
   padding: 50px;
@@ -196,21 +200,23 @@ body {
   border-radius: 10px;
   background-color: #fff;
 }
-.Services .data_inner img {
+.Services a .data_inner img {
   height: 200px;
   width: 200px;
   padding-bottom: 30px;
 }
-.Services .data_inner h3 {
+.Services a .data_inner h3 {
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
   font-weight: bold;
+  color: #000;
 }
-.Services .data_inner p {
+.Services a .data_inner p {
   padding: 15px 0 25px;
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
   font-weight: bolder;
+  color: #000;
 }
 
 @media (max-width: 576px) {
@@ -261,31 +267,29 @@ marquee img:hover {
   font-family: "Cairo", sans-serif;
   border-bottom: solid #2d2c97 3px;
 }
-.item_inner .item {
+.item_inner a {
+  text-decoration: none;
+}
+.item_inner a .item {
   direction: rtl;
   height: 500px;
   background-color: #fff;
 }
-.item_inner .item img {
+.item_inner a .item img {
   height: 250px;
   width: 100%;
   padding-bottom: 40px;
 }
-.item_inner .item p {
+.item_inner a .item p {
   width: 80%;
   padding: 20px 0;
+  color: #000;
 }
-.item_inner .item h5 {
+.item_inner a .item h5 {
   font-family: "Almarai", sans-serif;
   font-family: "Cairo", sans-serif;
   font-weight: bolder;
-}
-.item_inner .item a {
-  font-family: "Almarai", sans-serif;
-  font-family: "Cairo", sans-serif;
-  font-weight: bolder;
-  text-decoration: none;
-  font-size: 20px;
+  color: #000;
 }
 
 @media (max-width: 576px) {
@@ -312,8 +316,20 @@ marquee img:hover {
   direction: rtl;
   padding: 40px 0;
 }
+.contact h1 {
+  font-family: "Almarai", sans-serif;
+  font-family: "Cairo", sans-serif;
+  font-weight: bold;
+}
+.contact h2 {
+  margin-bottom: 50px;
+  width: 17%;
+  font-family: "Almarai", sans-serif;
+  font-family: "Cairo", sans-serif;
+  border-bottom: solid #2d2c97 3px;
+}
 .contact .form_contact {
-  padding: 80px 0;
+  padding: 10px 0 80px 0;
 }
 .contact .form_contact input {
   padding: 10px;

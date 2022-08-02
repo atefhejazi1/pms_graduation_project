@@ -23,6 +23,11 @@
 <body dir="rtl">
     <div class="container my-5">
         <!-- Outer Row -->
+        @if (session('success'))
+        <div class="alert alert-primary" style="direction: rtl;">
+            {{ session('success') }}
+        </div>
+        @endif
         <div class="row justify-content-center">
 
             <div class="col-xl-10 col-lg-12 col-md-9">

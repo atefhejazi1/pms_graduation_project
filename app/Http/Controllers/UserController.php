@@ -11,6 +11,16 @@ use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
+
+
+    function __construct()
+    {
+        $this->middleware('permission:users-list|users-all|users-show', ['only' => ['index']]);
+        $this->middleware('permission:users-create', ['only' => ['create']]);
+        $this->middleware('permission:users-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:users-delete', ['only' => ['destroy']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -42,22 +52,27 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|same:confirm-password',
-            'roles_name' => 'required'
-        ]);
+        // $this->validate($request, [
+        //     'name' => 'required',
+        //     'email' => 'required|email|unique:users,email',
+        //     'password' => 'required|same:confirm-password',
+        //     'roles_name' => 'required'
+        // ]);
 
         $input = $request->all();
-
+        if ($input['roles_name']  !== 'بلا صلاحية') {
+            $role = Role::create(['name' => 'بلا صلاحية']);
+        }
 
         $input['password'] = Hash::make($input['password']);
 
         $user = User::create($input);
         $user->assignRole($request->input('roles_name'));
-        return redirect()->route('users.index')
-            ->with('success', 'تم اضافة المستخدم بنجاح');
+
+
+
+        return redirect()->route('login')
+            ->with('success', 'تم اضافة المستخدم بنجاح , انتظر التفعيل سوف يتم التواصل معك قريباً !!');
     }
 
     /**

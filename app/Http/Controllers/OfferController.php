@@ -9,6 +9,14 @@ use Illuminate\Http\Request;
 
 class OfferController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('permission:offers-list|offers-all', ['only' => ['index']]);
+        $this->middleware('permission:offers-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:offers-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:offers-delete', ['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *

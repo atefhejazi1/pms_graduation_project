@@ -28,4 +28,5 @@ class IndexController extends Controller
 
         return view('index', compact('services', 'blogs', 'aboutUsData', 'offers', 'brands', 'partners'));
     }
+
 }
