@@ -59,7 +59,7 @@ The system supports multiple roles with role-based access:
 | Backend     | Laravel (PHP)    |
 | Database    | MySQL            |
 | Auth System | Laravel Breeze |
-| UI Styling  | Bootstrap / Tailwind CSS |
+| UI Styling  | Bootstrap |
 
 ---
 
