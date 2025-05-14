@@ -1,64 +1,90 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# ⛽ Petrol Management System - Full Stack Web Application
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> 🎓 Graduation Project | Built with Laravel (PHP Framework)
 
-## About Laravel
+## 📌 Project Description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Petrol Management System** is a full-stack web application developed as my graduation project. The system is designed to manage petrol stations across Gaza, providing a digital platform for announcements, news, offers, and user roles. The application aims to enhance communication and monitoring between petrol station owners and the Ministry of Economy.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🎥 Demo & Overview
 
-## Learning Laravel
+Watch a detailed video explaining how the platform works:  
+👉 [YouTube - Platform Explanation](https://www.youtube.com/watch?v=Qw5KXXLCzVA)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🧠 Project Idea
 
-## Laravel Sponsors
+The core goal of this system is to manage everything related to petrol stations in Gaza efficiently, digitally, and securely. The system provides:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- 📰 Latest news and updates related to petrol stations.
+- 📢 Announcement system for promotions and offers.
+- 🛠️ Administrative dashboard with multiple access levels.
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## 👥 User Roles & Permissions
 
-## Contributing
+The system supports multiple roles with role-based access:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Station Owner**:  
+  Can log in to manage their own station profile, publish offers, and follow up with approvals.
 
-## Code of Conduct
+- **Ministry of Economy**:  
+  Has a special dashboard to review and approve/reject station submissions and announcements.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Admin**:  
+  Full control over the system, including users, roles, content, and settings.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🔑 Key Features
 
-## License
+- 🛠️ Role-based dashboard (Admin, Owner, Ministry).
+- 📢 Post offers and announcements for stations.
+- 📰 News management system.
+- ✅ Approval workflow by the Ministry.
+- 🗂️ Clean, organized backend using Laravel.
+- 💻 Responsive and user-friendly front-end.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🛠️ Tech Stack
+
+| Layer       | Technology       |
+|-------------|------------------|
+| Frontend    | Blade |
+| Backend     | Laravel (PHP)    |
+| Database    | MySQL            |
+| Auth System | Laravel Breeze |
+| UI Styling  | Bootstrap / Tailwind CSS |
+
+---
+
+## 📂 Installation & Setup
+
+# 1. Clone the repository
+git clone [https://github.com/your-username/petrol-management-system.git](https://github.com/atefhejazi1/pms_graduation_project.git)
+
+# 2. Navigate to the project folder
+cd petrol-management-system
+
+# 3. Install PHP dependencies
+composer install
+
+# 4. Copy .env and generate key
+cp .env.example .env
+php artisan key:generate
+
+# 5. Set up your database in the .env file
+
+# 6. Run migrations
+php artisan migrate
+
+# 7. (Optional) Seed default roles and users
+php artisan db:seed
+
+# 8. Serve the app
+php artisan serve
